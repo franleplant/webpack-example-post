@@ -8,7 +8,7 @@ const img = document.createElement("img");
 img.src = logo;
 img.style.cssText = `
   width: 100px;
-`
+`;
 root.appendChild(img);
 
 UserComponent(root, { name: "fran" });
