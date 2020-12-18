@@ -48,7 +48,7 @@ module.exports = {
   devtool: false,
   output: {
     publicPath: "",
-    filename: "index.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
 
