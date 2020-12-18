@@ -14,6 +14,16 @@ const tsRules = {
   },
 };
 
+const svgRules = {
+  test: /\.svg$/,
+  use: {
+    loader: "url-loader",
+    options: {
+      limit: Infinity,
+    },
+  },
+};
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -22,10 +32,10 @@ module.exports = {
   },
 
   resolve: {
-      extensions: ['.js', '.ts']
+    extensions: [".js", ".ts"],
   },
 
   module: {
-    rules: [tsRules],
+    rules: [tsRules, svgRules],
   },
 };
