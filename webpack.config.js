@@ -30,6 +30,16 @@ const cssRules = {
   use: [MiniCssExtractPlugin.loader, "css-loader"],
 };
 
+const jpgRules = {
+  test: /\.jpg/,
+  use: {
+    loader: "file-loader",
+    options: {
+      name: "[name].[ext]",
+    },
+  },
+};
+
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
@@ -37,6 +47,7 @@ module.exports = {
   // to read the output
   devtool: false,
   output: {
+    publicPath: "",
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
   },
@@ -46,7 +57,7 @@ module.exports = {
   },
 
   module: {
-    rules: [tsRules, svgRules, cssRules],
+    rules: [tsRules, svgRules, cssRules, jpgRules],
   },
   plugins: [new MiniCssExtractPlugin()],
 };
