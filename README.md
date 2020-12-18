@@ -1,7 +1,7 @@
 # Webpack example
 
 
-This is a very dump example of a webpack config
+This is a very dumb example of a webpack config
 and a dumb source that we want to compile and bundle.
 
 
