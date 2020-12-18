@@ -1,4 +1,4 @@
-//import 'base.css'
+import "./base.css";
 import UserComponent from "./UserComponent";
 import logo from "./logo.svg";
 

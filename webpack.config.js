@@ -1,4 +1,5 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const tsRules = {
   test: /\.ts$/,
@@ -24,8 +25,17 @@ const svgRules = {
   },
 };
 
+const cssRules = {
+  test: /\.css$/i,
+  use: [MiniCssExtractPlugin.loader, "css-loader"],
+};
+
 module.exports = {
   entry: "./src/index.js",
+  mode: "development",
+  // This is just to make it easier
+  // to read the output
+  devtool: false,
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
@@ -36,6 +46,7 @@ module.exports = {
   },
 
   module: {
-    rules: [tsRules, svgRules],
+    rules: [tsRules, svgRules, cssRules],
   },
+  plugins: [new MiniCssExtractPlugin()],
 };
