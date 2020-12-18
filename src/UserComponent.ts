@@ -3,10 +3,10 @@ export interface IProps {
 }
 
 export default function UserComponent(root: HTMLElement, props: IProps): void {
-  const element = document.createElement('div')
+  const element = document.createElement("div");
   element.innerHTML = `
     <div>Hi ${props.name}</div>
-  `
+  `;
 
-  root.appendChild(element)
+  root.appendChild(element);
 }
