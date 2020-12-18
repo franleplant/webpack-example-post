@@ -52,6 +52,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
 
+  externals: {
+    moment: "moment",
+  },
+
   resolve: {
     extensions: [".js", ".ts"],
   },

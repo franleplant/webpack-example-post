@@ -1,3 +1,4 @@
+import moment from "moment";
 import "./base.css";
 import UserComponent from "./UserComponent";
 import logo from "./logo.svg";
@@ -11,4 +12,4 @@ img.style.cssText = `
 `;
 root.appendChild(img);
 
-UserComponent(root, { name: "fran" });
+UserComponent(root, { name: "fran", date: moment().format() });
